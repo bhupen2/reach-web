@@ -1,6 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import Login from "../pages/Login";
 import Dashboard from "../pages/Dashboard";
+import SenderCredential from "../pages/SenderCredential";
 import ProtectedRoute from "../auth/ProtectedRoute";
 
 export default function AppRoutes() {
@@ -12,6 +13,14 @@ export default function AppRoutes() {
         element={
           <ProtectedRoute>
             <Dashboard />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/sendercredential"
+        element={
+          <ProtectedRoute>
+            <SenderCredential />
           </ProtectedRoute>
         }
       />

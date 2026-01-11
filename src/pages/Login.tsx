@@ -11,7 +11,7 @@ export default function Login() {
   const submit = async (values: { email: string; password: string }) => {
     try {
       const res = await loginMut.mutateAsync(values);
-      login(res.accessToken, res.role);
+      login(res.access_token, res.user.role);
       nav("/dashboard");
     } catch {
       message.error("Login failed");

@@ -27,7 +27,7 @@ export default function DashboardLayout({ children }: { children: ReactNode }) {
         />
       </Sider>
       <Layout>
-        <Header style={{ background: "#fff" }}>Admin</Header>
+        <Header style={{ background: "#fff",fontFamily:"Roboto",fontSize:"24px",fontWeight:"bold" }}>Reach CRM</Header>
         <Content style={{ margin: 16 }}>{children}</Content>
       </Layout>
     </Layout>

@@ -6,8 +6,17 @@ export interface LoginPayload {
 }
 
 export interface LoginResponse {
-  accessToken: string;
-  role: "ADMIN" | "MANAGER" | "USER";
+  access_token: string;
+  refresh_token:string;
+  user:{
+    created_at:string;
+    email:string;
+    id:string;
+    name:string;
+    role:"ADMIN" | "MANAGER" | "USER";
+    updated_at:string
+  }
+   
 }
 
 export const loginApi = async (payload: LoginPayload): Promise<LoginResponse> => {
