@@ -6,7 +6,7 @@ import { MENU } from "./menu";
 
 const { Sider, Header, Content } = Layout;
 
-export default function DashboardLayout({ children }: { children: ReactNode }) {
+export default function MainLayout({ children }: { children: ReactNode }) {
   const { permissions } = useAuth();
   const nav = useNavigate();
   const loc = useLocation();

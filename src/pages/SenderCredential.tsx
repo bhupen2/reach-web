@@ -1,4 +1,4 @@
-import DashboardLayout from "../layout/DashboardLayout";
+import MainLayout from "../layout/MainLayout";
 import { Card, Form, Input, Button, Typography, message, Col,Row } from "antd";
 import { senderCredential } from "../api/sendercredentials";
 import {useState} from 'react';
@@ -12,7 +12,7 @@ export default function SenderCredential() {
 
   
 
-  const submit = async (values: { senderemail: string; password: string; smtpserverstring:string;port:string }) => {
+  const submit = async (values: { senderEmail: string; password: string; smtpServer:string;port:string }) => {
 
     try{
 
@@ -33,7 +33,7 @@ export default function SenderCredential() {
   
   
 
-  return <DashboardLayout>
+  return <MainLayout>
     <Typography.Title level={1} align="center">Add a Sender Credential</Typography.Title> <br/>
     {frontendMessage && (
                     <div style={{fontFamily:"Roboto",fontSize:"18px"}} align="center">
@@ -86,5 +86,5 @@ export default function SenderCredential() {
     
   
     
-  </DashboardLayout>;
+  </MainLayout>;
 }

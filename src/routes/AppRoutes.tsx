@@ -3,6 +3,8 @@ import Login from "../pages/Login";
 import Dashboard from "../pages/Dashboard";
 import SenderCredential from "../pages/SenderCredential";
 import ProtectedRoute from "../auth/ProtectedRoute";
+import FileUpload from "../pages/FileUpload";
+import ViewFiles from "../pages/ViewFiles";
 
 export default function AppRoutes() {
   return (
@@ -24,6 +26,24 @@ export default function AppRoutes() {
           </ProtectedRoute>
         }
       />
+      <Route
+        path="/fileupload"
+        element={
+          <ProtectedRoute>
+            <FileUpload />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/viewfiles"
+        element={
+          <ProtectedRoute>
+            <ViewFiles />
+          </ProtectedRoute>
+        }
+      />
     </Routes>
+    
+    
   );
 }
