@@ -5,6 +5,7 @@ import SenderCredential from "../pages/SenderCredential";
 import ProtectedRoute from "../auth/ProtectedRoute";
 import FileUpload from "../pages/FileUpload";
 import ViewFiles from "../pages/ViewFiles";
+import CampaignLiveStream from "../pages/CampaignLiveStream";
 
 export default function AppRoutes() {
   return (
@@ -39,6 +40,14 @@ export default function AppRoutes() {
         element={
           <ProtectedRoute>
             <ViewFiles />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/campaignlivestream"
+        element={
+          <ProtectedRoute>
+            <CampaignLiveStream />
           </ProtectedRoute>
         }
       />

@@ -48,7 +48,7 @@ export default function Dashboard() {
       <Col span={8}>
       <Card style={{ width: 360, height:150, margin: "100px auto" }}>
           <Typography.Title level={3}>Campaign Tracking</Typography.Title>
-          <Typography.Link href="">Start Email Campaign</Typography.Link><br/>
+          <Typography.Link href="/campaignlivestream">Start Email Campaign</Typography.Link><br/>
           <Typography.Link href="">Upload Email Bounces</Typography.Link><br/>
       
         </Card>

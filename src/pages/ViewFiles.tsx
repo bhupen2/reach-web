@@ -1,9 +1,6 @@
 import MainLayout from "../layout/MainLayout";
-import { Card,Upload, Form, Button, Typography, message, Row,Col} from "antd";
-import { UploadOutlined} from "@ant-design/icons";
+import { Card, Form, Typography} from "antd";
 import { Select} from "antd";
-import { UploadProps,UploadFile } from "antd";
-import api from "../api/axios";
 import {useState,useEffect} from 'react';
 import DisplayTable from "../components/DisplayTable"
 
