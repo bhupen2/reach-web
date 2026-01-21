@@ -26,7 +26,7 @@ export default function Dashboard() {
       <Col span={8}>
         <Card style={{ width: 360, height: 150, margin: "100px auto" }}>
           <Typography.Title level={3}>Customer Management</Typography.Title>
-          <Typography.Link href="">Create Cohort</Typography.Link><br/>
+          <Typography.Link href="/createcohort">Create Cohort</Typography.Link><br/>
           <Typography.Link href="">Add Customer To Cohort</Typography.Link><br/>
       
         </Card>
