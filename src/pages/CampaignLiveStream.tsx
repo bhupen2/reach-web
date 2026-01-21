@@ -113,7 +113,7 @@ export default function CampaignLiveStream(){
 
 
 return <MainLayout>
-    <Typography.Title level={1} align="center">Email Sent Status Live</Typography.Title>
+    <Typography.Title level={1} align="center">Start and Monitor Email Campaign</Typography.Title>
     {/* Card for displaying select for - sender email, cohort, email template */}
     <Card style={{ width: '80vw', margin: "100px auto" }}>
         <Typography.Title level={3} align="center">Select Campaign Details</Typography.Title>

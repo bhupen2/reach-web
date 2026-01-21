@@ -7,6 +7,7 @@ import FileUpload from "../pages/FileUpload";
 import ViewFiles from "../pages/ViewFiles";
 import CampaignLiveStream from "../pages/CampaignLiveStream";
 import CreateCohort from "../pages/CohortCreation";
+import CohortCustomerLiveStream from "../pages/CohortCustomer";
 
 export default function AppRoutes() {
   return (
@@ -57,6 +58,14 @@ export default function AppRoutes() {
         element={
           <ProtectedRoute>
             <CreateCohort />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/addcohortcustomer"
+        element={
+          <ProtectedRoute>
+            <CohortCustomerLiveStream />
           </ProtectedRoute>
         }
       />
