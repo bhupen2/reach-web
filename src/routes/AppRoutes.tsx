@@ -8,6 +8,7 @@ import ViewFiles from "../pages/ViewFiles";
 import CampaignLiveStream from "../pages/CampaignLiveStream";
 import CreateCohort from "../pages/CohortCreation";
 import CohortCustomerLiveStream from "../pages/CohortCustomer";
+import CreateEmailTemplate from "../pages/EmailTemplateCreation";
 
 export default function AppRoutes() {
   return (
@@ -66,6 +67,15 @@ export default function AppRoutes() {
         element={
           <ProtectedRoute>
             <CohortCustomerLiveStream />
+          </ProtectedRoute>
+        }
+      />
+
+      <Route
+        path="/createtemplate"
+        element={
+          <ProtectedRoute>
+            <CreateEmailTemplate />
           </ProtectedRoute>
         }
       />
