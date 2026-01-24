@@ -30,5 +30,7 @@ jobs:
       - name: Deploy to server
         run: |
           sshpass -p "${{ secrets.DEPLOY_PASSWORD }}" \
-          rsync -avz --delete build/ \
+          rsync -avz --delete \
+          -e "ssh -o StrictHostKeyChecking=no" \
+          build/ \
           ${{ secrets.DEPLOY_USER }}@${{ secrets.SERVER_HOST }}:${{ secrets.DEPLOY_PATH }}
