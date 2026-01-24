@@ -32,5 +32,5 @@ jobs:
           sshpass -p "${{ secrets.DEPLOY_PASSWORD }}" \
           rsync -avz --delete \
           -e "ssh -o StrictHostKeyChecking=no" \
-          build/ \
+          dist/ \
           ${{ secrets.DEPLOY_USER }}@${{ secrets.SERVER_HOST }}:${{ secrets.DEPLOY_PATH }}
