@@ -20,12 +20,14 @@ jobs:
 
       - name: Install dependencies
         run: npm install --no-audit --no-fund
-
-      - name: Build React app
-        
+      - name: Create Vite env file
         run: |
           echo "VITE_BASE_URL=${{ secrets.VITE_BASE_URL }}" > .env
-          npm run build
+      - name: Verify env file
+        run: |
+          cat .env
+      - name: Build React app
+        run: npm run build
 
       - name: Install sshpass
         run: sudo apt-get install -y sshpass
