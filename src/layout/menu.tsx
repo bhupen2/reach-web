@@ -17,7 +17,7 @@ export const MENU: MenuItem[] = [
     permission: "dashboard:view"
   },
   {
-    key: "/dashboard/users",
+    key: "/newuser",
     label: "Users",
     icon: <UserOutlined />,
     permission: "users:view"

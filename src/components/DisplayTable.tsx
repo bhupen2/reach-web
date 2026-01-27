@@ -3,13 +3,14 @@ import React,{useState,useEffect} from "react";
 import api from "../api/axios";
 
 interface QueryParameter{
-  param1:string;
+  urlEndPoint:string;
   //define an optional parameter
-  param2?:string; 
+  param1Name:string;
+  param1Value:string
  }
 
 
-const DisplayTable:React.FC<QueryParameter> = ({param1, param2}) =>{
+const DisplayTable:React.FC<QueryParameter> = ({urlEndPoint, param1Name,param1Value}) =>{
   
  interface ColumnArray{
     title: string; 
@@ -25,9 +26,13 @@ const DisplayTable:React.FC<QueryParameter> = ({param1, param2}) =>{
   
   useEffect(()=>{
 
+    const DynamicParam:{[key:String]:any} = {
+      [param1Name]:param1Value
+    };
+    
     
 
-    api.get('/viewFileList',{params:{filetype:param1}})
+    api.get(urlEndPoint,{params:DynamicParam})
            .then((res) => res.data)
            .then((result)=>{
             const resultArray = result || []

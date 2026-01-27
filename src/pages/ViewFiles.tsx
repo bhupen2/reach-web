@@ -72,7 +72,7 @@ export default function ViewFiles(){
         <Card style={{ width: '80vw', margin: "80px auto"}}>
                 <Typography.Title level={3} align="center">Files List</Typography.Title>
                 
-                {isSelectionMade ? (<DisplayTable param1={fileType}/>) : (<p>Please select an option to view the table.</p>)}
+                {isSelectionMade ? (<DisplayTable urlEndPoint='/viewFileList' param1Name= 'filetype' param1Value={fileType}/>) : (<p>Please select an option to view the table.</p>)}
                 
 
             </Card>
