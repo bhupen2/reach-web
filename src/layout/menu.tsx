@@ -20,6 +20,14 @@ export const MENU: MenuItem[] = [
     key: "/newuser",
     label: "Users",
     icon: <UserOutlined />,
-    permission: "users:view"
+    permission: "dashboard:view"
+    
+  },
+  {
+    key: "/manageuser",
+    label: "Manage Users",
+    icon: <UserOutlined />,
+    permission: "dashboard:view"
+    
   }
 ];

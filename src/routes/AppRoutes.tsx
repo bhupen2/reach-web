@@ -11,6 +11,7 @@ import CohortCustomerLiveStream from "../pages/CohortCustomer";
 import CreateEmailTemplate from "../pages/EmailTemplateCreation";
 import EmailBounceStream from "../pages/EmailBounceStream";
 import AddUser from "../pages/UserAddition";
+import ManageUsers from "../pages/ManageUsers";
 
 export default function AppRoutes() {
   return (
@@ -21,6 +22,14 @@ export default function AppRoutes() {
         element={
           <ProtectedRoute>
             <Dashboard />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/manageuser"
+        element={
+          <ProtectedRoute>
+            <ManageUsers />
           </ProtectedRoute>
         }
       />
