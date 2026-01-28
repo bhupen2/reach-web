@@ -5,8 +5,8 @@ import api from "../api/axios";
 interface QueryParameter{
   urlEndPoint:string;
   //define an optional parameter
-  param1Name:string;
-  param1Value:string
+  param1Name?:string;
+  param1Value?:string
  }
 
 
@@ -26,9 +26,15 @@ const DisplayTable:React.FC<QueryParameter> = ({urlEndPoint, param1Name,param1Va
   
   useEffect(()=>{
 
-    const DynamicParam:{[key:String]:any} = {
-      [param1Name]:param1Value
-    };
+    // const DynamicParam:{[key:String]:any} = {
+    //   [param1Name]:param1Value
+    // };
+
+    let DynamicParam:{[key:String]:any} = {}
+
+    if (param1Name&&param1Value){
+      DynamicParam = {[param1Name]:param1Value};
+    }
     
     
 

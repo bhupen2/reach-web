@@ -89,7 +89,7 @@ export default function CreateEmailTemplate(){
                     <TextArea rows={4} placeholder="Max 3000 characters" maxLength={3000}/>
                 </Form.Item>
                 <Form.Item name="subjectLine" rules={[{required: true }]} label="Subject Line">
-                    <TextArea rows={2} placeholder="Max 50 characters" maxLength={5}/>
+                    <TextArea rows={2} placeholder="Max 50 characters" maxLength={50}/>
                 </Form.Item>
                 <Form.Item name="fileName" rules={[{required: true}]} label="Customer File">
                         
