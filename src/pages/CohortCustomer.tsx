@@ -84,7 +84,7 @@ export default function CohortCustomerLiveStream(){
                 endRow:values.endrow
 
             });
-        const streamingURLWithParams = `http://localhost:5015/customer/custUploadStream?${params}`
+        const streamingURLWithParams = `${import.meta.env.VITE_BASE_URL}customer/custUploadStream?${params}`
 
         // add an EventSource function to initiate open a connection with server side from client   
         const eventSource = new EventSource(streamingURLWithParams);
