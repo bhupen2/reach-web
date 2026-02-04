@@ -63,7 +63,7 @@ export default function EmailBounceStream(){
                 endRow:values.endRow
 
             });
-        const streamingURLWithParams = `http://localhost:5015/run/bounceStream?${params}`
+        const streamingURLWithParams = `${import.meta.env.VITE_BASE_URL}run/bounceStream?${params}`
 
         // add an EventSource function to initiate open a connection with server side from client   
         const eventSource = new EventSource(streamingURLWithParams);
