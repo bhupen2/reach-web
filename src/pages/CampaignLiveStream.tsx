@@ -89,7 +89,7 @@ export default function CampaignLiveStream(){
                 emailTemplates:selectedTemplateValue
 
             });
-        const streamingURLWithParams = `${import.meta.env.VITE_BASE_URL}/run/streamCampaign?${params}`
+        const streamingURLWithParams = `${import.meta.env.VITE_BASE_URL}run/streamCampaign?${params}`
 
         // add an EventSource function to initiate open a connection with server side from client   
         const eventSource = new EventSource(streamingURLWithParams);
